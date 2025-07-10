@@ -1,0 +1,30 @@
+<!Doctype html>
+<html>
+    <head>
+
+    </head>
+    <body> 
+        <button style="color:aqua; background-color:brown; border-radius:5px;" onclick="count.tini=increament(count.tini); notify();">tini</button>
+        <button onclick="count.nanni=increament(count.nanni); notify();">nanni</button>
+        <button onclick="count.bulbul=increament(count.bulbul); notify();">bulbul</button>
+        <script>
+            let a;
+            let count={
+                tini: 0,
+                nanni: 0,
+                bulbul: 0
+            };
+            function increament(a)
+            {
+                a=a+1;
+                return a;
+            }
+            function notify()
+            {
+            alert(`             Tini: ${count.tini}
+            Nanni: ${count.nanni}
+            Bulbul: ${count.bulbul}`);
+            }
+        </script>
+    </body>
+</html>

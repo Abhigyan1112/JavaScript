@@ -1,0 +1,128 @@
+@font-face {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    src: url(Fonts/SF-Pro.dmg);
+}
+html, body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width:100%;
+    height:100%;
+}
+#main{
+    width:100%;
+    min-height:100vh;
+}
+nav{
+    width:100%;
+    height: 5.5vh;
+    background-color: rgba(255,255,255,0.8);
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    gap:2.5vw;
+    font-size:12px;
+    color:rgb(29,29,31);
+    position:fixed;
+    top:0px;
+    z-index:100;
+    backdrop-filter: saturate(1.8) blur(20px);
+}
+nav a{
+    text-decoration: none;
+    color:rgb(54, 53, 53);
+    font-weight:300;
+}
+nav button{
+    border:none;
+    background-color: transparent;
+}
+.column1, .column2, .column3{
+    position:relative;
+    display:flex;
+    margin-top:12px;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height:83.8vh;
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+}
+.column1 img{
+    position:absolute;
+    width:120%;
+    right:-60px;
+    bottom:50px;
+}
+.text-column1{
+    position:absolute;
+    color:#ffff;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    top:15%;
+    line-height: 0.3;
+}
+.text-column1 h1,.text-column2 h1{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size:3.8vw;
+    font-weight: 500;
+}
+.text-column1 p,.text-column2 p{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size:1.8vw;
+    font-weight: 300;
+}
+.link{
+    margin-top:4vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:1.5vw;
+}
+.link button{
+    font-size:medium;
+    height:5.2vh;
+    border-radius:2.5vh;
+}
+.blue-button{
+    height:9vh;
+    width:130px;
+    border:0;
+    color:#ffff;
+    background-color:rgb(32, 107, 219);
+}
+.white-button{
+    height:9vh;
+    width:70px;
+    background-color: transparent;
+    color:rgb(69, 138, 242);
+    border: 1px solid;
+    border-color:rgb(49, 127, 243);
+    font-weight: lighter;
+}
+.column2{
+    background-image:url(images/University-Students.jpg);
+    background-size:450vh auto;
+    background-position-x: center;
+}
+.text-column2{
+    position:absolute;
+    color:#ffff;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    bottom:8%;
+    line-height: 0.3;
+}
+.column3{
+    background-image:url(images/Macbook-Air.jpg);
+    background-size:370vh auto;
+    background-position-x:center;
+    background-position-y:bottom;
+}

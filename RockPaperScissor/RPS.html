@@ -1,0 +1,72 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>RPS</title>
+    </head>
+    <body>
+        <button onclick="
+            let computerpick=computermove();
+            let status='';
+            if(computerpick==='rock')
+                {
+                    status='Its a tie.';
+                }
+            else if(computerpick==='paper')
+                {
+                    status='You Lose.';
+                }
+            else
+                {
+                    status='You win.';
+                }
+            alert(`The computer picked ${computerpick},${status}`);
+        ">Rock</button>
+        <button onclick="
+            computerpick=computermove();
+            status='';
+            if(computerpick==='rock')
+            {
+                status='You win.';
+            }
+            else if(computerpick==='paper')
+            {
+                status='Its a tie.';
+            }
+            else
+            {
+                status='You lose.';
+            }
+            alert(`The computer picked ${computerpick},${status}`);
+        ">Paper</button>
+        <button onclick="
+            computerpick=computermove();
+            status='';
+            if(computerpick==='rock')
+            {
+                status='You lose.';
+            }
+            else if(computerpick==='paper')
+            {
+                status='You win.';
+            }
+            else
+            {
+                status='Its a tie.';
+            }
+            alert(`The computer picked ${computerpick},${status}`);    
+        ">Scissor</button>
+        <script>
+        function computermove()
+        {
+            let computer='';
+            computer=Math.random();
+            if(computer<1/3)
+            return 'rock';
+            else if(computer>=1/3 && computer<2/3)
+            return 'paper';
+            else
+            return 'scissors';
+        }
+        </script>        
+    </body>
+</html>
