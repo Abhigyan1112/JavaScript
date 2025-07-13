@@ -228,6 +228,34 @@
 // let classlist=para.classList.add("newClass");
 
 
+// const employee = {
+//     calcTax(){
+//         console.log("The tax is 10%");
+//     }
+// }
+
+// const Emp1 = {
+//     salary: 50000,
+// };
+
+// Emp1.__proto__=employee;
+// // setting the __proto__ of an object to another makes it inherit the properties of the another object.
+
+
+
+
+// CLASS
+
+// class Maruti {
+//     start(){
+//         console.log("start");
+//     }
+//     stop(){
+//         console.log("stop");
+//     }
+// }
+
+// let eightHundred = new Maruti();    // objects can be made with the keyword new;
 
 
 
@@ -239,6 +267,146 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// setTimeout(() => {
+//     console.log("Hell0");
+// } , 2000); 
+
+
+//CALLBACK 
+// passing a function as parameters to another function for execution.
+
+// function getData(DataId, nextData){
+//     console.log(`getting Data ${DataId}.........`);
+//     setTimeout(() =>{
+//         console.log("Data, ID: ",DataId);
+//         if(nextData) nextData();
+//     },2000);
+// }
+
+
+// getData(1,()=>{
+//     getData(2, ()=>{
+//         getData(3, ()=>{
+//             getData(4);
+//         })
+//     });
+// })
+
+
+//CALLBACK HELL
+//Nested callbacks stacked below one another are difficult to understand and manage, they for a pyramid like structure (PYRAMID OF DOOM)
+ 
+
+//PROMISES
+//   let promise = new Promise((resolve,reject)=>{
+//     console.log("I am a promise");
+//   })
+// A promise is an object which has some states namely resolve, pending and rejected.
+//when we call a function or API, it will return us a promise instead of the data at the very instant, after a while when the data
+//is succefully fetched, the promise status changes from "pending" to "successful" and we can access the data then.
+
+
+// function getData(dataId){
+//     return new Promise((resolve,reject) =>{
+//         setTimeout(() =>{
+//             console.log("data",dataId);
+//             resolve("sucess");
+//         },6000)
+//     })
+// }
+
+
+// promise.then(() => {
+//     console.log("Success");
+// })
+// this is executed whenever the promise got has been resolved.
+
+// promise.catch(() => {
+//     console.log("rejected");
+// })
+// this is executed whenever the promise got was rejected.
+
+
+//PROMISE CHAINING
+// getData(1)
+//     .then((res) =>{
+//         return getData(2); //getData(1) will return a promise of getData(2) if it is completed.
+//     })
+//     .then((res) =>{
+//         return getData(3); //it will be executed after getData returns a sucess and calls for getData(2). this will return getData(3) promise if getData(2) is completed.
+//     })
+//     .then((res) => {
+//         console.log(res); //executed when promise of getData(3) is completed 
+//     })
+
+
+//ASYNC - AWAIT
+// function api(dataID){
+//     return new Promise((resolve,reject) =>{
+//         setTimeout(()=>{
+//             console.log("data",dataID);
+//             resolve(200);
+//         },2000);
+//     });
+// }
+
+// async function getWeatherData(){
+//     console.log("getting data 1......");
+//     await api(1);
+//     console.log("getting data 2......");
+//     await api(2);
+//     console.log("getting data 3......");
+//     await api(3);
+//     console.log("getting data 4......");
+//     await api(4);
+//     console.log("getting data 5......");
+//     await api(5);
+// }
+
+// it is a very simple and very easy to undestand code.
+//await keyword is used to wait for the function to get executed to get to the next line.
+//async function defines a function as it will be asynchronous in nature.
+//whenever we know that a fucntion might get asynchronous due to fetching delays we declare it as async.
+//await function can only be used inside an async function.
+//to use async-await we have to put the code inside a function with async on its head. TO AVOID THIS:
+
+//IIFE : IMMEDIATELY INVOKED FUNCTION EXPRESSION
+//IIFE are functions which are used only once in a  program and they are immediately invoked when they are delclared.
+
+// (async function getWeatherData(){
+//     console.log("getting data 1......");
+//     await api(1);
+//     console.log("getting data 2......");
+//     await api(2);
+//     console.log("getting data 3......");
+//     await api(3);
+//     console.log("getting data 4......");
+//     await api(4);
+//     console.log("getting data 5......");
+//     await api(5);
+// })();
 
 
 
