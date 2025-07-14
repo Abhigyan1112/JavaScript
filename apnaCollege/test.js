@@ -414,3 +414,62 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// FETCH API
+
+url="https://catfact.ninja/facts?max_length=500&limit=3/facts"
+
+// const getFacts = async ()=>{
+//     console.log("fetching.....");
+//     let response = await fetch(url);
+//     console.log(response); // JSON format
+// };
+
+// AJAX - Asynchronous JS and XML 
+// before modern javascript, data was sent in the format of XML but it has been replaced with JSON.
+// JSON - JavaScript Object Notation
+
+//json() - it is an asynchronous method which returns a second promise (fetch returns the first promise). It is used to convert JSON to JS object.
+
+// const getFacts = async ()=>{
+//     console.log("fetching.....");
+//     let response = await fetch(url);
+//     let data = await (response.json());
+//     console.log(data.data[0].fact);
+//     const fact = document.querySelector(".fact");
+//     fact.innerText=data.data[0].fact;
+// };
+
+// let button = document.querySelector("#btn");
+// button.addEventListener("click", ()=>{
+//     getFacts();
+// })
+
+//HTTP verbs - GET, POST, DELETE, HEAD, PUT, CONNECT
+// HEADERS - headers have some additional information  which comes with the respones or we send with the request.
+
+
+
